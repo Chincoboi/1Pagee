@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="shortcut icon" href="img/bancrux logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" 
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/761b4a6616.js" crossorigin="anonymous"></script>
+    <title>Login Form</title>
+</head>
+<body>
+    <nav id="navBar" class="navbar-white">
+        <a href="index.html"><img src="/img/bancrux logo.png" class="logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="house.html" class="active">Popular Places</a></li>
+                    <li><a href="#">Travel Outside</a></li>
+                    <li><a href="listing.html">Online Packages</a></li>
+                </ul>
+            </div>
+            <a href="register.html" class="register-btn">Register Now</a>
+            <i class="fas fa-bars" onclick="togglebtn()"></i>
+        </a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form>
+                        <input type="email" class="input-box" placeholder="Your Email Id" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="button" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+                    <a href="">Forgot Password</a>
+                </div>
+                <div class="card-back">
+                    <h2>REGISTER</h2>
+                    <form>
+                        <input type="text" class="input-box" placeholder="Your Name" required>
+                        <input type="email" class="input-box" placeholder="Your Email Id" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="button" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I've an Account</button>
+                    <a href="">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://facebook.com/" target="blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/" target="blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/" target="blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/" target="blank"><i class="fab fa-instagram"></i></a>
+        <hr>
+        <p>Copyright &copy; 2022, Daniel Richard Damilola.</p>
+    </div>
+</div>
+<script>
+    var navBar = document.getElementById("navBar");
+    
+    function togglebtn(){
+        navBar.classList.toggle("hidemenu")
+    }
+    </script>
+
+    <script>
+        var card = document.getElementById("card");
+
+        function openRegister(){
+            card.style.transform = "rotateY(-180deg)";
+        }
+
+        function openLogin(){
+                    card.style.transform = "rotateY(0deg)";
+        }
+    </script>
